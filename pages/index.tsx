@@ -48,11 +48,6 @@ export default function Home() {
       <div className="hello" onClick={() => setNight(!night)}>
         Hello
       </div>
-
-
-      
-
-
     </>
   );
 }

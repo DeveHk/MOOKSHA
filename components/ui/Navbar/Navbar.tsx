@@ -33,9 +33,9 @@ const Navbar = (props: Props) => {
           className={`links hidden md:flex  items-center w-full gap-8 justify-center `}
         >
           <Link
-            href="/events"
+            href="/newEventPage"
             className={`link ${koulen.className} uppercase  ${
-              router.asPath === "/events" ? ACTIVELINKTYLE : "text-xl"
+              router.asPath === "/newEventPage" ? ACTIVELINKTYLE : "text-xl"
             }`}
           >
             Events

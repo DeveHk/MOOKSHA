@@ -1,8 +1,8 @@
 import { Koulen } from "@next/font/google";
 import Image from "next/image";
 
-import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import EventCarosel from "./EventCarosel";
 import EventDays from "./EventDays";
@@ -108,12 +108,6 @@ const events = [
 ];
 const EventsPage = () => {
   const [day, setDay] = useState("I");
-
-  useEffect(() => {}, []);
-  return (
-    <div
-      className={`${koulen.className} text-white h-[93vh] bg-[#f44142] justify-center items-center flex  overflow-x-hidden relative`}
-
   const containerRef: any = useRef();
 
   useLayoutEffect(() => {
@@ -160,7 +154,6 @@ const EventsPage = () => {
     <div
       className={`${koulen.className} text-white h-[93vh] bg-[#f44142] justify-center items-center flex  overflow-x-hidden relative`}
       ref={containerRef}
-
     >
       <div className="z-10">
         <Image
@@ -169,34 +162,27 @@ const EventsPage = () => {
           height={100}
           alt="border"
           className="absolute w-28 lg:w-40 xl:w-44 left-0 top-0 borders-1"
-
         />
         <Image
           src="border-event-contact.svg"
           width={100}
           height={100}
           alt="border"
-
           className="absolute w-28 lg:w-40 xl:w-44 right-0 -scale-x-100 top-0"
-
         />
         <Image
           src="border-event-contact.svg"
           width={100}
           height={100}
           alt="border"
-
           className="absolute w-28 lg:w-40 xl:w-44 bottom-0 left-0 -scale-y-100  borders-3"
-
         />
         <Image
           src="border-event-contact.svg"
           width={100}
           height={100}
           alt="border"
-
           className="absolute w-28 lg:w-40 xl:w-44 bottom-0 right-0 -scale-y-100 -scale-x-100"
-
         />
       </div>
       <div className="mt-6 md:mt-4 flex flex-col relative   w-full items-center  mb-4">
@@ -205,7 +191,6 @@ const EventsPage = () => {
         </h1>
 
         <div className="flex space-x-1 h-full event-days">
-
           {days.map((d, i) => {
             return (
               <EventDays
@@ -219,7 +204,6 @@ const EventsPage = () => {
         </div>
 
         <div className="mt-20 event-carousel">
-
           <EventCarosel
             events={events.filter((e) => e.day == day).at(0)?.events}
             day={day}
